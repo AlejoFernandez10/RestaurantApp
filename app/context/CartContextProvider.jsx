@@ -8,23 +8,23 @@ import Context from './Context'
 
 
 const CartContextProvider = ({children})=>{
-
-
-
-    const [cart, setCart ] = useState(()=> {
-      
-        const localCart = localStorage.getItem('cart')
-        return localCart ? JSON.parse(localCart) : []
-      
-    })
   
-
-    useEffect(()=>{
-
-      localStorage.setItem('cart', JSON.stringify(cart))
-
-    }, [cart])
-
+  localStorage.setItem('cart', cart)
+  
+  const [cart, setCart ] = useState(()=> {
+    
+    const localCart = localStorage.getItem('cart')
+    return localCart ? JSON.parse(localCart) : []
+    
+  })
+  
+  
+  useEffect(()=>{
+    
+    localStorage.setItem('cart', JSON.stringify(cart))
+    
+  }, [cart])
+  
     return(
       <Context.Provider value={[cart, setCart]}>
 
