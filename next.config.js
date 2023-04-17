@@ -2,8 +2,13 @@
 const nextConfig = {
   experimental: {
     appDir: true,
+
   },
-  reactStrictMode:true
+  images:{
+    domains: ['api.pizzahut.io','www.havmor.com',"cdn.grofers.com"]
+  },
+  reactStrictMode:true,
+  
 }
 
 module.exports = nextConfig

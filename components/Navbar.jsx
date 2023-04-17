@@ -8,8 +8,8 @@ import OpenCartButton from '@/app/cart/OpenCartButton'
 import {AiOutlineHome} from 'react-icons/ai'
 import {IoMdNotificationsOutline} from 'react-icons/io'
 import {GiHamburgerMenu} from 'react-icons/gi'
-import {MdPersonOutline} from 'react-icons/md'
-import NavBarUser from './NavBarUser'
+
+
 
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
@@ -22,19 +22,19 @@ const Navbar = () => {
 
   const[open, setOpen] = useState(false) 
 
-  const openMenuOnClick = ()=>{
+  const openMenuonClick = ()=>{
     setOpen(true)
   }
 
   return (
-    <header className='bg-[#242837]  md:transition md:duration-200 md:hover:w-[7%] z-[50] fixed h-[5vh] bottom-0 w-full sm:h-[100vh] sm:w-[5%] lg:w-[4%] sm:flex sm:items-center sm:justify-center '>
+    <header className='bg-[#1F1D2B] min-h-[60px] md:transition md:duration-200 md:hover:w-[7%] z-[50] fixed h-[5vh] bottom-0 w-full sm:h-[100vh] sm:w-[5%] lg:w-[4%] sm:flex sm:items-center sm:justify-center '>
       <nav>
 
           
 
         <ul className='hidden  max-h-[800px] sm:flex flex-col gap-14 items-center '> 
 
-           <li> <NavBarUser /></li> 
+          
           
           <li >
 
@@ -87,7 +87,7 @@ const Navbar = () => {
                   leaveFrom="translate-x-0"
                   leaveTo="translate-x-full"
                 >
-                  <Dialog.Panel className="pointer-events-auto w-screen max-w-md ">
+                  <Dialog.Panel className="pointer-events-auto w-screen max-w-[500px] ">
                     <div className="flex h-full flex-col overflow-y-scroll bg-[#1F1D2B]  ">
                       <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
                         <div className="flex items-start justify-between mb-10">
@@ -103,9 +103,15 @@ const Navbar = () => {
                             </button>
                           </div>
                         </div>
-                      <ul className='pt-5 '>
+                      <ul className='pt-5 flex flex-col gap-4'>
                         <li>
-                          <Link href={'/'}><MdPersonOutline className='text-[#EC7C6A] text-[25px]'/> </Link>
+                          <Link href={'/'} className='text-sm'>Sobre Nosotros </Link>
+                        </li>
+                        <li>
+                          <Link href={'/'} className='text-sm'>Donde Encontranos </Link>
+                        </li>
+                        <li>
+                          <Link href={'/'} className='text-sm'>FAQs </Link>
                         </li>
                       </ul>
                        
@@ -122,16 +128,17 @@ const Navbar = () => {
 
       {/* MOBILE BOTTOM MENU */}
             
-      <ul className='flex  w-full justify-between m-auto max-w-[350px] px-12 items-center sm:hidden'>
+      <ul className='flex pt-[10px] w-full justify-between m-auto max-w-[350px] px-12  items-center sm:hidden'>
+            
             <li >
 
-            <Link href={'/'}> <AiOutlineHome  className='text-[#EC7C6A] text-[25px]'/> </Link>
+            <Link href={'/'}> <AiOutlineHome  className='text-[#EC7C6A] text-[25px] '/> </Link>
 
             </li>
 
             <li >
 
-            <Link href={'/'}><IoMdNotificationsOutline  className='text-[#EC7C6A] text-[25px]'/></Link>
+            <Link href={'/'}><IoMdNotificationsOutline  className='text-[#EC7C6A] text-[25px] '/></Link>
 
             </li>
             
@@ -140,7 +147,7 @@ const Navbar = () => {
 
           <li >
 
-            <Link href={'/'} onClick={()=> openMenuOnClick()}><GiHamburgerMenu  className='text-[#EC7C6A] text-[25px]'/> </Link>
+            <Link href={'/'} onClick={()=> openMenuonClick()}><GiHamburgerMenu  className='text-[#EC7C6A]  text-[25px]'/> </Link>
 
             </li>
         </ul>

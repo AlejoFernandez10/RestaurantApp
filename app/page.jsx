@@ -15,16 +15,22 @@ const Home = async () => {
 	const dataProducts= [];
 
 	const dataFetch = await fetch('https://pizza-and-desserts.p.rapidapi.com/pizzas', options)
-	.then(response => response.json())
-	.then(response => dataProducts.push(response))
+	.then(response => response.json())																/* --- FETCH DE PIZZAS ------ */
+	.then(response => dataProducts.push(response))	
 	.catch(err => console.error(err));
 
+	const dataDesserts = await fetch('https://pizza-and-desserts.p.rapidapi.com/desserts', options)
+	.then(response => response.json())
+	.then(response => dataProducts.push(response))
+	.catch(err =>  console.log(err))
 
+	
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-[#1F1D2B]">
+    <main className="flex min-h-screen flex-col items-center justify-center  bg-[#262737]">
 
-      <HomeProducts products={dataProducts} />
+      {dataProducts && <HomeProducts products={dataProducts} />}
+			
       
     </main>
   )
