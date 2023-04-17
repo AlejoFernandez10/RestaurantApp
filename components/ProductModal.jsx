@@ -4,10 +4,11 @@ import { Fragment, useRef, useState, useEffect } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 
 import Image from 'next/image'
+import AddToCartBtn from './AddToCartBtn'
 
 const  ProductModal = ({name, price, description, img, state, id})=> {
 
-  console.log(state)
+ 
 
   const [open, setOpen] = useState(false)
 
@@ -54,8 +55,8 @@ const  ProductModal = ({name, price, description, img, state, id})=> {
               <Dialog.Panel className="relative transform sm:ml-5 overflow-hidden rounded-lg bg-[#262737] text-left shadow-xl transition-all sm:w-[90%]  sm:max-w-[900px] ">
                 <div className="bg-[#262737] px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                   <div className="sm:flex sm:items-start">
-                    <div className="mx-auto flex  flex-shrink-0 items-center justify-center rounded-[10px] bg-red-100 sm:mx-0 ">
-                    <Image src={img} alt={description}  width={150} height={82.5} className='rounded-[15%] h-auto w-auto'  />
+                    <div className="mx-auto flex  flex-shrink-0 rounded-[10%] items-center justify-center rounded-[10px] bg-red-100 sm:mx-0  mt-5">
+                      <Image src={img} alt={description}  width={150} height={82.5} className='rounded-[10%] h-auto w-auto '  />
                     </div>
                     <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                       <Dialog.Title as="h3" className=" font-semibold text-2xl leading-6 mb-4 sm:mb-14 sm:pt-5 text-gray-100">
@@ -77,7 +78,7 @@ const  ProductModal = ({name, price, description, img, state, id})=> {
                     className="inline-flex w-full justify-center rounded-md  px-3 py-2 text-sm font-semibold text-white shadow-sm  sm:ml-3 sm:w-auto"
                     onClick={() => setOpen(false)}
                   >
-                    Agregar
+                    <AddToCartBtn name={name} img={img} description={description} price={price} id={id}/>
                   </button>
                   <button
                     type="button"

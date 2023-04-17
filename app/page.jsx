@@ -1,5 +1,5 @@
+import Filters from "@/components/Filters";
 import HomeProducts from "@/components/HomeProducts";
-
 
 const options = {
 	method: 'GET',
@@ -15,7 +15,7 @@ const Home = async () => {
 	const dataProducts= [];
 
 	const dataFetch = await fetch('https://pizza-and-desserts.p.rapidapi.com/pizzas', options)
-	.then(response => response.json())																/* --- FETCH DE PIZZAS ------ */
+	.then(response => response.json())															
 	.then(response => dataProducts.push(response))	
 	.catch(err => console.error(err));
 
@@ -26,9 +26,16 @@ const Home = async () => {
 
 	
 
+		
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center  bg-[#262737]">
+    <main className="flex min-h-screen flex-col items-center justify-center w-full bg-[#262737]">
 
+			<div className="w-full ">
+
+			  <Filters />
+
+			</div>
+ 
       {dataProducts && <HomeProducts products={dataProducts} />}
 			
       
