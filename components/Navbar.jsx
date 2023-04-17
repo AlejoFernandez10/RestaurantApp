@@ -27,14 +27,14 @@ const Navbar = () => {
   }
 
   return (
-    <header className='bg-[#1F1D2B] min-h-[60px] md:transition md:duration-200 md:hover:w-[7%] z-[50] fixed h-[5vh] bottom-0 w-full sm:h-[100vh] sm:w-[5%] lg:w-[4%] sm:flex sm:items-center sm:justify-center '>
+    <header className='bg-[#1F1D2B] min-h-[60px] md:transition md:duration-200 md:hover:w-[7%] z-[50] fixed h-[5vh] bottom-0 w-full md:h-[100vh] md:max-w-[7%] lg:w-[5%]  md:flex md:items-start  md:justify-center '>
       <nav>
 
           
 
-        <ul className='hidden  max-h-[800px] sm:flex flex-col gap-14 items-center '> 
+        <ul className='hidden  max-h-[800px] md:flex flex-col gap-14 items-center md:pt-20 '> 
 
-          
+          <h2 className='font-semibold text-xl'>LOGO</h2>
           
           <li >
 
@@ -128,7 +128,7 @@ const Navbar = () => {
 
       {/* MOBILE BOTTOM MENU */}
             
-      <ul className='flex pt-[10px] w-full justify-between m-auto max-w-[350px] px-12  items-center sm:hidden'>
+      <ul className='flex pt-[10px] w-full justify-between m-auto max-w-[350px] px-12  items-center md:hidden'>
             
             <li >
 

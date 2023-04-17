@@ -8,11 +8,14 @@ import Context from '../app/context/Context'
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 
-const AddToCartBtn = ({name, price , img , description, id}) => {
+const AddToCartBtn = ({name, price , img , description, id, quantity }) => {
 
-  const [cart, setCart] = useContext(Context)
-
-  const [count, setCount ] = useState(1);
+  const [cart, setCart] = useContext(Context) 
+      
+    
+  const [count , setCount ] = useState(()=>{
+    return quantity > 0 ? quantity : 1
+  });
 
   const addToCart = () => {
     setCart((currentItems) => {
@@ -42,7 +45,9 @@ const AddToCartBtn = ({name, price , img , description, id}) => {
 
   return (
     <>
-      <AiOutlinePlusCircle onClick={()=> addToCart() } className='text-[26px] text-[#EC7C6A] cursor-pointer'/>     
+
+      <AiOutlinePlusCircle onClick={()=> addToCart() } className='text-[27px]  text-[#EC7C6A] cursor-pointer  hover:opacity-80 ' />
+
   
       
     </>
@@ -50,3 +55,5 @@ const AddToCartBtn = ({name, price , img , description, id}) => {
 }
 
 export default AddToCartBtn
+
+

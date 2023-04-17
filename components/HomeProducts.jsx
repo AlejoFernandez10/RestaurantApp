@@ -20,10 +20,10 @@ const HomeProducts = ({products}) => {
   if(products){
 
     return (
-      <div className='w-full flex flex-col sm:pl-9 m-auto' >
-        <h1 className='text-center pt-16 mb-5 text-3xl'  id='main-title'>Catálogo</h1>
+      <div className='w-full flex flex-col  m-auto' >
+        
   
-        <div className='grid grid-cols-1 m-auto  place-items-center sm:grid-cols-2 lg:grid-cols-3 gap-x-2  w-full px-10 gap-y-20 pt-20 md:max-w-[700px] lg:max-w-[1200px] '>  
+        <div className='grid grid-cols-1 m-auto  place-items-center sm:grid-cols-2 lg:grid-cols-3 gap-x-2  w-full px-10 gap-y-20 pt-20 md:max-w-[700px] lg:max-w-[1100px] '>  
         
         {products[0].slice(10, prodsDisplayed).map((prod)=>(
 

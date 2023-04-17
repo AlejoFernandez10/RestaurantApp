@@ -1,9 +1,11 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import FilterButtons from './FilterButtons'
+
+import {FiSearch} from 'react-icons/fi'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -14,16 +16,26 @@ const Filters = () => {
   
 
   return (
-    <section className=''>
+    <section className='w-full flex flex-col justify-center items-center'>
+      
+      <div className=' max-w-[1050px] flex flex-col items-start justify-between  w-full pt-10 sm:flex-row  sm:items-center'>
+
+        <div className='p-2 mx-4'>
+          <h1 className='text-2xl'>Tu Resto</h1>
+          <span className='text-gray-400 text-sm'>09 November 2002</span>
+        </div>
+        <input type="Search" placeholder='Search' className='rounded-[5px] text-sm bg-[#1F1D2B] m-auto p-[5px] px-4 w-[90%] sm:w-[250px] sm: sm:m-0 sm:mr-5 py-[7px] text-gray-50  ' />
+      </div>
+
+        <div className=' max-w-[1050px] flex items-center justify-center sm:justify-start w-full pt-6 pb-5 mx-2'>
+
+          <FilterButtons />
+        </div>
       
 
-       
-
-        <FilterButtons />
-
       
 
-      <div className='w-full flex justify-between px-2 pt-4'>
+      <div className='w-full max-w-[1050px] flex justify-between items-center px-2 pt-4'>
         <h4 className='font-semibold text-base'>Choose Dishes</h4>
         <Menu as="div" className="relative inline-block text-left">
       <div>

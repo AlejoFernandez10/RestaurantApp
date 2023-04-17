@@ -7,31 +7,40 @@ function classNames(...classes) {
 }
 const FilterButtons = () => {
 
-  const [buttonActive, setButtonActive] = useState(false)
+  const [buttonActive, setButtonActive] = useState(true)
   const [button1Active, setButton1Active] = useState(false)
   const [button2Active, setButton2Active] = useState(false)
+  const [button3Active, setButton3Active] = useState(false)
 
 
   
 
   return (
-    <div className='grid grid-cols-3 w-full justify-between items-center px-4 '>
+    <div className='flex justify-start items-start  w-full  border-b-[1px]  p-0   mx-2'>
+
+      <div className='max-w-[300px] w-full grid grid-cols-4 justify-between sm:max-w-[400px] '>
+          <button onClick={()=>setButtonActive(true) & setButton1Active(false) & setButton2Active(false) & setButton3Active(false)} className={classNames(
+            buttonActive ? ' text-[#EC7C6A] border-[#EC7C6A]' : 'text-gray-100',
+             '   border-b-[1px] pb-2  text-sm sm:text-base' 
+           )}>Show All </button>
+
+          <button onClick={()=>setButtonActive(false) & setButton1Active(true) & setButton2Active(false) & setButton3Active(false)} className={classNames(
+            button1Active ? ' text-[#EC7C6A] border-[#EC7C6A]' : 'text-gray-100',
+             '   border-b-[1px] pb-2  text-sm  sm:text-base'
+           )}>Pizzas </button>
+
+           <button onClick={()=>setButtonActive(false) & setButton1Active(false) & setButton2Active(true) & setButton3Active(false)} className={classNames(
+            button2Active ? ' text-[#EC7C6A] border-[#EC7C6A]' : 'text-gray-100',
+             '   border-b-[1px] pb-2 text-sm  sm:text-base'
+           )}>Desserts </button>
+
+           <button onClick={()=>setButtonActive(false) & setButton1Active(false) & setButton2Active(false) & setButton3Active(true)} className={classNames(
+            button3Active ? ' text-[#EC7C6A] border-[#EC7C6A]' : 'text-gray-100',
+             '    border-b-[1px] pb-2 text-sm  sm:text-base'
+           )}>Hot Dishes </button>
+          </div>
+      </div>
     
-    <button onClick={()=>setButtonActive(true) & setButton1Active(false) & setButton2Active(false)} className={classNames(
-      buttonActive ? ' text-[#EC7C6A] border-[#EC7C6A]' : 'text-gray-100',
-       ' border-b-2 pb-1 w-full'
-     )}>Pizzas </button>
-
-     <button onClick={()=>setButtonActive(false) & setButton1Active(true) & setButton2Active(false)} className={classNames(
-      button1Active ? ' text-[#EC7C6A] border-[#EC7C6A]' : 'text-gray-100',
-       ' border-b-2 pb-1 w-full'
-     )}>Desserts </button>
-
-     <button onClick={()=>setButtonActive(false) & setButton1Active(false) & setButton2Active(true)} className={classNames(
-      button2Active ? ' text-[#EC7C6A] border-[#EC7C6A]' : 'text-gray-100',
-       ' border-b-2 pb-1 w-full'
-     )}>Cold Dishes </button>
-    </div>
   )
 }
 
