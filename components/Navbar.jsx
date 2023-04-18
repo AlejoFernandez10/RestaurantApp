@@ -9,10 +9,9 @@ import {AiOutlineHome} from 'react-icons/ai'
 import {IoMdNotificationsOutline} from 'react-icons/io'
 import {GiHamburgerMenu} from 'react-icons/gi'
 
-
-
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
+import OpenNotisButton from '@/app/notifications/openNotisButton'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -27,7 +26,7 @@ const Navbar = () => {
   }
 
   return (
-    <header className='bg-[#1F1D2B] min-h-[60px] md:transition md:duration-200 md:hover:w-[7%] z-[50] fixed h-[5vh] bottom-0 w-full md:h-[100vh] md:max-w-[7%] lg:w-[5%]  md:flex md:items-start  md:justify-center '>
+    <header className='bg-[#1F1D2B] min-h-[60px] md:transition-all md:duration-200 md:hover:w-[7%] z-[40] fixed h-[5vh] bottom-0 w-full md:h-[100vh] md:max-w-[9%] lg:w-[5%] transform   md:flex md:items-start  md:justify-center '>
       <nav>
 
           
@@ -42,17 +41,13 @@ const Navbar = () => {
 
           </li>
 
-          <li >
+          <li className='cursor-pointer'>
 
-            <Link href={'/'}><IoMdNotificationsOutline  className='text-[#EC7C6A] text-[25px] md:text-[40px] md:p-2 rounded  hover:bg-gray-700 hover:bg-opacity-40'/></Link>
-
-          </li>
-
-          <li >
-
-            <Link href={'/'}><IoMdNotificationsOutline  className='text-[#EC7C6A] text-[25px] md:text-[40px] md:p-2 rounded hover:bg-gray-700 hover:bg-opacity-40 '/></Link>
+          <OpenNotisButton />
 
           </li>
+
+          
         
           <OpenCartButton />
         </ul>
@@ -138,12 +133,14 @@ const Navbar = () => {
 
             <li >
 
-            <Link href={'/'}><IoMdNotificationsOutline  className='text-[#EC7C6A] text-[25px] '/></Link>
+            <OpenNotisButton />
 
             </li>
             
-          
+          <li>
+
           <OpenCartButton />
+          </li>
 
           <li >
 

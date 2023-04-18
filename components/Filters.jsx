@@ -24,7 +24,10 @@ const Filters = () => {
           <h1 className='text-2xl'>Tu Resto</h1>
           <span className='text-gray-400 text-sm'>09 November 2002</span>
         </div>
-        <input type="Search" placeholder='Search' className='rounded-[5px] text-sm bg-[#1F1D2B] m-auto p-[5px] px-4 w-[90%] sm:w-[250px] sm: sm:m-0 sm:mr-5 py-[7px] text-gray-50  ' />
+        <form className='relative flex items-center'>
+        <FiSearch  className='absolute text-[18px] left-3'/>
+        <input type="Search" placeholder='Search' className='rounded-[5px] text-sm bg-[#1F1D2B] m-auto p-[5px] pl-9 px-4 w-[90%] sm:w-[250px] sm: sm:m-0 sm:mr-5 py-[7px] text-gray-50  ' />
+        </form>
       </div>
 
         <div className=' max-w-[1050px] flex items-center justify-center sm:justify-start w-full pt-6 pb-5 mx-2'>
@@ -65,7 +68,7 @@ const Filters = () => {
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                  Account settings
+                  Populares
                 </a>
               )}
             </Menu.Item>

@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { useContext, useState } from 'react'
 import {AiOutlinePlusCircle} from 'react-icons/ai'
@@ -39,16 +39,30 @@ const AddToCartBtn = ({name, price , img , description, id, quantity }) => {
         ]
       }
     })
+    toast.success('Producto Agregado!', {
+      position: "bottom-center",
+      autoClose: 1400,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      });
   }
 
+  
+  
+  
   
 
   return (
     <>
+    
 
-      <AiOutlinePlusCircle onClick={()=> addToCart() } className='text-[27px]  text-[#EC7C6A] cursor-pointer  hover:opacity-80 ' />
+      <AiOutlinePlusCircle onClick={()=> addToCart() & toast() } className='text-[27px]  text-[#EC7C6A] cursor-pointer  hover:opacity-80 ' />
 
-  
+    
       
     </>
   )

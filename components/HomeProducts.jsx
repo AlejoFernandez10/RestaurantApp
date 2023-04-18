@@ -7,7 +7,7 @@ import React , {useState} from 'react'
 
 import PizzasItem from './PizzasItem'
 import DessertsItem from './DessertItem'
-import Image from 'next/image'
+import { ToastContainer } from 'react-toastify'
 
 const HomeProducts = ({products}) => {
 
@@ -52,9 +52,23 @@ const HomeProducts = ({products}) => {
   
   
         <button onClick={()=> setProdsDisplayed(30) & setDessertsDisplayes(6)} className='m-auto font-semibold text-gray-200 bg-[#EC7C6A] px-4 py-2 rounded cursor-pointer mt-5' style={{display:`${prodsDisplayed > 28 ? "none": "inline"}` }}> Ver todos </button>
-        
+        <ToastContainer
+        position="bottom-center"
+        autoClose={1400}
+        limit={2}        
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        />
       </div>
+      
     )
+
+    
 
   }
 }

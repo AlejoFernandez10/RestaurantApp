@@ -120,7 +120,7 @@ const  ProductModal = ({name, price, description, img, state, id})=> {
                   <button
                     type="button"
                     className="inline-flex w-full justify-center rounded-md  px-3 py-2 text-sm font-semibold text-white shadow-sm  sm:ml-3 sm:w-auto"
-                    onClick={() => setOpen(false)}
+                    
                   >
                     <AddToCartBtn name={name} img={img} description={description} price={price} id={id} quantity={quantity} />
                   </button>

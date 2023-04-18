@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar'
 import './globals.css'
 import CartContextProvider from './context/CartContextProvider'
+import Notifications from './notifications/Notifications'
 
 export const metadata = {
   title: 'Tu Restaurante',
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         <CartContextProvider>
           <Navbar />
+          <Notifications />
           {children}        
         </CartContextProvider>          
       </body>
