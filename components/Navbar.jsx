@@ -6,16 +6,16 @@ import Link from 'next/link'
 import OpenCartButton from '@/app/cart/OpenCartButton'
 
 import {AiOutlineHome} from 'react-icons/ai'
-import {IoMdNotificationsOutline} from 'react-icons/io'
+
 import {GiHamburgerMenu} from 'react-icons/gi'
+import {BsQuestionCircle} from 'react-icons/bs'
+import {MdPeopleOutline} from 'react-icons/md'
 
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import OpenNotisButton from '../app/notifications/OpenNotisButton'
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+
 
 const Navbar = () => {
 
@@ -31,9 +31,9 @@ const Navbar = () => {
 
           
 
-        <ul className='hidden  max-h-[800px] md:flex flex-col gap-14 items-center md:pt-20 '> 
+        <ul className='hidden  max-h-[800px] md:flex flex-col gap-10 items-center md:pt-20 '> 
 
-          <h2 className='font-semibold text-xl'>LOGO</h2>
+          <h2 className='font-semibold text-xl'> <Link href={'/'}> LOGO </Link>  </h2>
           
           <li >
 
@@ -50,6 +50,23 @@ const Navbar = () => {
           
         
           <OpenCartButton />
+          
+          <li className=''>
+            <Link href={'/'} className='relative nav-link  ' >
+              <MdPeopleOutline className='text-[#EC7C6A] text-[22px] md:text-[40px] md:p-2 rounded hover:bg-gray-700 hover:bg-opacity-40' />              
+
+               <p className='absolute  top-10  right-[-50px]   shadow-2xl text-sm font-semibold transition-all duration-200 '>About us</p>
+              
+            </Link>
+          </li>
+
+          <li>
+            <Link href={'/'} className='relative nav-link'>
+              <BsQuestionCircle className='text-[#EC7C6A] text-[22px] md:text-[40px] md:p-2 rounded hover:bg-gray-700 hover:bg-opacity-40' />
+              <p className='absolute  top-10  right-[-30px]   shadow-2xl text-sm font-semibold transition-all duration-200 '>FAQs</p>
+            </Link>
+          </li>
+
         </ul>
 
         

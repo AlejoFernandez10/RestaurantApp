@@ -24,3 +24,10 @@ body {
 }
 
 
+.nav-link p{
+  display: none;
+}
+
+.nav-link:hover > p{
+  display: inline;
+}

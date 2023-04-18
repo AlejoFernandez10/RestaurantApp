@@ -10,6 +10,7 @@ import Context from '../context/Context'
 import { toast } from 'react-toastify';
 import Image from 'next/image';
 import {BsTrash3} from 'react-icons/bs'
+import Link from 'next/link';
 
 const Cart = ({state}) => {
 
@@ -163,12 +164,13 @@ const Cart = ({state}) => {
                         </div>
                         <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                         <div className="mt-6">
-                          <a
-                            href="#"
+                          <Link
+                            href="/checkout"
+                            onClick={() => setOpen(false)}
                             className="flex items-center justify-center rounded-md border border-transparent bg-[#EC7C6A] px-6 py-3 text-base font-medium opacity-90 text-gray-200 shadow-sm hover:opacity-[100%]"
                           >
                             Checkout
-                          </a>
+                          </Link>
                         </div>
                         <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                           <p>
