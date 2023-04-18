@@ -38,7 +38,7 @@ const Filters = () => {
 
       
 
-      <div className='w-full max-w-[1020px] flex justify-between items-center px-2 pt-4'>
+      <div className='w-full max-w-[1200px] flex justify-between items-center px-2 pt-4'>
         <h4 className='font-semibold text-base'>Choose Dishes</h4>
         <Menu as="div" className="relative inline-block text-left">
       <div>
