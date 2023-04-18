@@ -28,7 +28,7 @@ const Home = async () => {
 
 		
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center w-full px-4 sm:pr-5 md:pl-20  xl:pl-0 bg-[#262737]">
+    <main className="flex min-h-screen flex-col items-center justify-center w-full px-4 sm:pr-5 md:pl-[10%] xl:pl-[5%]  2xl:p-0  bg-[#262737]">
 
 			<div className="w-full flex justify-center">
 

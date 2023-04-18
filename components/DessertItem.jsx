@@ -23,7 +23,7 @@ const DessertsItem = ({ name, description, img , price, id }) => {
     
   }
   return (
-    <div  className='bg-[#1F1D2B] m-1 rounded-[10px] flex flex-col w-full z-0 relative max-w-[280px] min-h-[220px]  md:max-w-[310px] lg:max-w-[330px] justify-center items-center transition duration-300 hover:shadow-2xl'>
+    <div  className='bg-[#1F1D2B] m-1 rounded-[10px] flex flex-col w-full z-0 relative max-w-[280px] min-h-[220px]  md:max-w-[310px] lg:max-w-[350px] lg:max-h-250px justify-center items-center transition duration-300 hover:shadow-2xl'>
             
             <button onClick={()=> openModal()} className=' absolute top-[-40px]'>
 
@@ -35,8 +35,8 @@ const DessertsItem = ({ name, description, img , price, id }) => {
               
                 <div className='pt-4 cursor-pointer' onClick={()=> openModal()}>
                   
-                    <h3 className='font-semibold text-base pb-2 text-left pl-2 md:pl-6'>{name} </h3>
-                    <p className='text-xs text-left px-8 pb-2 pl-2 mb-5 text-gray-400 md:pl-6'>{description.slice(0,30)}... </p>
+                    <h3 className='font-semibold text-base pb-2 text-left  md:pl-6'>{name} </h3>
+                    <p className='text-xs text-left pr-8 pb-2  mb-5 text-gray-400 md:pl-6'>{description.slice(0,30)}... </p>
                                    
                 </div>
               

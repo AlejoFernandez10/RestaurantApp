@@ -1,6 +1,5 @@
 'use client'
 
-
 import React, {useState, Fragment} from 'react'
 import Link from 'next/link'
 import OpenCartButton from '@/app/cart/OpenCartButton'

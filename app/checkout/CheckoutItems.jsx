@@ -5,11 +5,10 @@ import Image from 'next/image'
 
 const CheckoutItems = () => {
 
-  const checkOutItems = localStorage.getItem('cart')
+  if( localStorage.getItem('cart')){
 
-  const itemsParsed = JSON.parse(checkOutItems)
-  
-  
+    const checkOutItems = localStorage.getItem('cart')
+    const itemsParsed = JSON.parse(checkOutItems)  
 
     return (
       <ul className="-my-4 divide-y divide-gray-100">
@@ -47,7 +46,7 @@ const CheckoutItems = () => {
        </ul>
     )
   
-
+    }            
 }
 
 export default CheckoutItems

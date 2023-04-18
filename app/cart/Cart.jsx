@@ -107,7 +107,7 @@ const Cart = ({state}) => {
                           <div className="flow-root">
                             <ul role="list" className="flex flex-col gap-y-5">
 
-                              {cart.length === 0 ? <p className='text-center absolute left-[30%] top-[30%] text-2xl'>Cart empty...</p> : 
+                              {cart.length === 0 ? <p className='text-center absolute left-[35%] top-[30%] text-2xl'>Cart empty...</p> : 
                                     
                               cart.map((product) => (
                                 <li key={product.id} className=" py-6 min-h-[150px]  bg-[#262737] rounded">
@@ -141,7 +141,7 @@ const Cart = ({state}) => {
                                         <button
                                           type="button"
                                           className="font-medium text-[#EC7C6A]"
-                                          onClick={()=> emptyCart()}
+                                          onClick={()=>  emptyCart()}
                                         >
                                           <BsTrash3 className='text-[18px] mb-2 mr-2'/>
                                         </button>
@@ -165,8 +165,8 @@ const Cart = ({state}) => {
                         <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                         <div className="mt-6">
                           <Link
-                            href="/checkout"
-                            onClick={() => setOpen(false)}
+                            href={cart != [] ? '/' : '/checkout'}
+                            onClick={() => cart != [] ? open : setOpen(false)}
                             className="flex items-center justify-center rounded-md border border-transparent bg-[#EC7C6A] px-6 py-3 text-base font-medium opacity-90 text-gray-200 shadow-sm hover:opacity-[100%]"
                           >
                             Checkout

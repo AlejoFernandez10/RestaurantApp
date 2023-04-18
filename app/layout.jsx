@@ -2,16 +2,22 @@ import Navbar from '@/components/Navbar'
 import './globals.css'
 import CartContextProvider from './context/CartContextProvider'
 import Notifications from './notifications/Notifications'
+import Loader from '@/components/Loader'
 
 export const metadata = {
-  title: 'Tu Restaurante',
-  description: 'Templates para Restaurantes ',
+  title: 'TuResto',
+  description: 'Template for Restaurants ',
 }
 
+
+
 export default function RootLayout({ children }) {
+
+  
   return (
     <html lang="en">     
-      <body>
+      <body className='relative'>
+        <Loader />
         <CartContextProvider>
           <Navbar />
           <Notifications />
