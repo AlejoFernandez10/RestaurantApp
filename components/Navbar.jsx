@@ -41,11 +41,11 @@ const Navbar = () => {
 
           </li>
 
-          <li className='cursor-pointer'>
+          
 
           <OpenNotisButton />
 
-          </li>
+          
 
           
         

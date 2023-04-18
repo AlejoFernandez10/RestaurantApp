@@ -12,7 +12,7 @@ import { IoMdNotificationsOutline } from 'react-icons/io'
 
 const Notifications = ({state}) => {
 
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
 
   const NotisContainer = []
 
@@ -59,7 +59,7 @@ const Notifications = ({state}) => {
                     <div className="flex h-full flex-col overflow-hidden bg-[#1F1D2B] shadow-xl">
                       <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
                         <div className="flex items-start justify-between">
-                          <Dialog.Title className="text-lg font-medium text-gray-100"> <IoMdNotificationsOutline className='text-white text-[30px]' /> </Dialog.Title>
+                          <Dialog.Title className="text-lg font-medium text-gray-100"> <IoMdNotificationsOutline className='text-white text-[25px]' /> </Dialog.Title>
                           <div className="ml-3 flex h-7 items-center">
                             <button
                               type="button"

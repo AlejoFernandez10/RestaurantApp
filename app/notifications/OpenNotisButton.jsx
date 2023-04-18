@@ -6,7 +6,7 @@ import { IoMdNotificationsOutline } from 'react-icons/io'
 
 const OpenNotisButton = () => {
 
-    const [open, setOpen] = useState(true)
+    const [open, setOpen] = useState(false)
 
     const openNotisMenu = ()=>{
       if(open === false){
@@ -20,7 +20,7 @@ const OpenNotisButton = () => {
 
   return (
     <div>
-      <button onClick={()=> openNotisMenu()} className='text-[#EC7C6A] text-[25px] md:text-[40px] md:p-2 rounded  hover:bg-gray-700 hover:bg-opacity-40 '>
+      <button onClick={()=> openNotisMenu()} className='  rounded-md   text-[25px] font-medium p-2 sm:mt-0 hover:bg-gray-700 hover:bg-opacity-40 text-[#EC7C6A]'>
 
       <IoMdNotificationsOutline  />
       </button>
