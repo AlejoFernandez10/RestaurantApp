@@ -3,19 +3,20 @@
 import React from 'react'
 import Image from 'next/image'
 
-const CheckoutItems = () => {
+const CheckoutItems = () => { 
 
-  if( localStorage.getItem('cart')){
-
+  if (typeof window !== 'undefined') {
+    
+  
     const checkOutItems = localStorage.getItem('cart')
     const itemsParsed = JSON.parse(checkOutItems)  
-
+  
     return (
       <ul className="-my-4 divide-y divide-gray-100">
   
   
              {itemsParsed.map((item)=>(
-
+  
                           <li key={item.id} className="flex items-center gap-4 py-4">
                             <Image
                               src={item.img}
@@ -46,7 +47,11 @@ const CheckoutItems = () => {
        </ul>
     )
   
-    }            
+  }
+
+
+  
+             
 }
 
 export default CheckoutItems
