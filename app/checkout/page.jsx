@@ -6,8 +6,6 @@ import TotalPrice from './TotalPrice'
 
 const Checkout = () => {
 
-
-
   
   return (
     <section className=' '>

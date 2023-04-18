@@ -16,27 +16,27 @@ const FilterButtons = () => {
   
 
   return (
-    <div className='flex justify-start items-start  w-full   border-b-[1px]  p-0   mx-2'>
+    <div className='flex justify-start items-start  w-full   border-b-[1px] border-gray-400 p-0   mx-2'>
 
       <div className='max-w-[320px] w-full grid grid-cols-4 justify-between sm:max-w-[400px] '>
           <button onClick={()=>setButtonActive(true) & setButton1Active(false) & setButton2Active(false) & setButton3Active(false)} className={classNames(
-            buttonActive ? ' text-[#EC7C6A] border-[#EC7C6A]' : 'text-gray-200',
-             '   border-b-[1px] pb-1  text-sm sm:text-base font-semibold' 
+            buttonActive ? ' text-[#EC7C6A] border-[#EC7C6A]' : 'text-gray-200 border-gray-400',
+             '   border-b-[1px]  pb-1  text-sm sm:text-base font-semibold' 
            )}>Show All </button>
 
           <button onClick={()=>setButtonActive(false) & setButton1Active(true) & setButton2Active(false) & setButton3Active(false)} className={classNames(
-            button1Active ? ' text-[#EC7C6A] border-[#EC7C6A] ' : 'text-gray-200',
-             '   border-b-[1px] pb-1  text-sm  sm:text-base font-semibold'
+            button1Active ? ' text-[#EC7C6A] border-[#EC7C6A] ' : 'text-gray-200 border-gray-400',
+             '   border-b-[1px]  pb-1  text-sm  sm:text-base font-semibold'
            )}>Pizzas </button>
 
            <button onClick={()=>setButtonActive(false) & setButton1Active(false) & setButton2Active(true) & setButton3Active(false)} className={classNames(
-            button2Active ? ' text-[#EC7C6A] border-[#EC7C6A] ' : 'text-gray-200',
-             '   border-b-[1px] pb-1 text-sm  sm:text-base font-semibold'
+            button2Active ? ' text-[#EC7C6A] border-[#EC7C6A] ' : 'text-gray-200 border-gray-400',
+             '   border-b-[1px]  pb-1 text-sm  sm:text-base font-semibold'
            )}>Desserts </button>
 
            <button onClick={()=>setButtonActive(false) & setButton1Active(false) & setButton2Active(false) & setButton3Active(true)} className={classNames(
-            button3Active ? ' text-[#EC7C6A] border-[#EC7C6A] ' : 'text-gray-200',
-             '    border-b-[1px] pb-1  text-sm  sm:text-base font-semibold'
+            button3Active ? ' text-[#EC7C6A] border-[#EC7C6A] ' : 'text-gray-200 border-gray-400',
+             '    border-b-[1px]  pb-1  text-sm  sm:text-base font-semibold'
            )}>Hot </button>
           </div>
       </div>
