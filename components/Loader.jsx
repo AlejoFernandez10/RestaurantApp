@@ -11,7 +11,7 @@ const Loader = () => {
 
   setTimeout(()=>{
     setLoader(false)
-  }, 1000)
+  }, 2000)
 
     if(loader){
     
