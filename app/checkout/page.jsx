@@ -1,6 +1,6 @@
 import React from 'react'
 
-import CheckoutItems from './checkoutItems'
+import CheckoutItems from './CheckoutItems'
 import TotalPrice from './TotalPrice'
 
 
