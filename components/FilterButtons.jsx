@@ -40,9 +40,9 @@ const FilterButtons = () => {
            )}>Desserts </button>
 
            <button onClick={()=>setButtonActive(false) & setButton1Active(false) & setButton2Active(false) & setButton3Active(true)} className={classNames(
-            button3Active ? ' text-[#EC7C6A] border-[#EC7C6A]  border-b-[1px]' : 'text-gray-200 ',
-             '      pb-1  text-sm  sm:text-base font-semibold'
-           )}>Hot </button>
+            button3Active ? ' text-[#EC7C6A] border-[#EC7C6A]   border-b-[1px]' : 'text-gray-200 ',
+             '  p-0    pb-1  text-sm  sm:text-base font-semibold'
+           )}>Popular </button>
           </div>
       </div>
     

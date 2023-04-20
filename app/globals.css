@@ -94,7 +94,7 @@ background-position: right center , 17px center , 0px center;
 
 
 .loaderItems {
-  width: 300px;
+  width: 250px;
   height: 220px;
   margin: auto;
   display: block;
@@ -102,6 +102,24 @@ background-position: right center , 17px center , 0px center;
   background: #1F1D2B;
   box-sizing: border-box;
 }
+
+@media screen and (min-width:350px) {
+  .loaderItems{
+    width: 290px;
+  }
+  
+}
+
+
+
+@media screen and (min-width:1020px) {
+  .loaderItems{
+    width: 95%;
+    max-width: 350px;
+  }
+  
+}
+
 .loaderItems::after {
   content: '';  
   width: calc(100% - 30px);

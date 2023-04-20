@@ -5,7 +5,7 @@ import { Fragment, useState, useEffect, useContext } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
-import Context from '../context/Context'
+import CartContext from '../context/Context'
 
 import { toast } from 'react-toastify';
 import Image from 'next/image';
@@ -18,7 +18,7 @@ const Cart = ({state}) => {
 
   const [open, setOpen] = useState(false)
 
-  const [cart, setCart] = useContext(Context)
+  const [cart, setCart] = useContext(CartContext)
 
 
   useEffect(()=>{
