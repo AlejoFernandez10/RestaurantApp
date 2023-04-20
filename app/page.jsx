@@ -13,6 +13,7 @@ const options = {
 const Home = async () => {
   
 	const dataProducts= [];
+	const desserts = []
 
 	const dataFetch = await fetch('https://pizza-and-desserts.p.rapidapi.com/pizzas', options)
 	.then(response => response.json())															
@@ -21,11 +22,15 @@ const Home = async () => {
 
 	const dataDesserts = await fetch('https://pizza-and-desserts.p.rapidapi.com/desserts', options)
 	.then(response => response.json())
-	.then(response => dataProducts.push(response))
+	.then(response => desserts.push(response))
 	.catch(err =>  console.log(err))
 
 	
+	desserts[0].forEach((prod)=>{
+		dataProducts[0].push(prod)
+	})
 
+	
 		
   return (
     <main className="flex min-h-screen flex-col items-center justify-center w-full px-4 sm:pr-5 md:pl-[10%] xl:pl-[5%]  2xl:p-0  bg-[#262737]">

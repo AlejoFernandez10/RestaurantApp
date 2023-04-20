@@ -40,7 +40,7 @@ const AddToCartBtn = ({name, price , img , description, id, quantity }) => {
       }
     })
     toast.success('Producto Agregado!', {
-      position: "bottom-center",
+      position: "top-center",
       autoClose: 1400,
       hideProgressBar: true,
       closeOnClick: true,

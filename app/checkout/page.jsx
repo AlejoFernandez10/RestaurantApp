@@ -9,6 +9,7 @@ const Checkout = () => {
   
   return (
     <section className=' '>
+      
             <h1 className="sr-only">Checkout</h1>
 
             <div className="mx-auto bg-[#262737] grid grid-cols-1 md:grid-cols-2 min-h-[100vh]">

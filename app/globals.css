@@ -91,3 +91,38 @@ background-position: right center , 17px center , 0px center;
 0%{  transform: rotate(-5deg)  }
 100%{  transform: rotate(10deg)  }
 }
+
+
+.loaderItems {
+  width: 300px;
+  height: 220px;
+  margin: auto;
+  display: block;
+  position: relative;
+  background: #1F1D2B;
+  box-sizing: border-box;
+}
+.loaderItems::after {
+  content: '';  
+  width: calc(100% - 30px);
+  height: 100%;
+  top: 40px;
+  left: 15px;
+  position: absolute;
+  background-image: linear-gradient(100deg, transparent, #262737 50%, transparent 80%), linear-gradient(#262737 56px, transparent 0), linear-gradient(#262737 24px, transparent 0), linear-gradient(#262737 18px, transparent 0), linear-gradient(#262737 66px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 75px 130px, 55px 100px, 160px 60px, 260px 50px, 290px 96px;
+  background-position: 0% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    background-position: 0% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
+  }
+  100% {
+    background-position: 150% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
+  }
+}
+  

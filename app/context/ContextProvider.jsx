@@ -3,11 +3,11 @@
 import React from "react"
 import { useState, useEffect } from "react"
 import Context from './Context'
+import FilterContext from "./FilterContext"
 
 
 
-
-const CartContextProvider = ({children})=>{
+const ContextProvider = ({children})=>{
   
   
   
@@ -20,14 +20,25 @@ const CartContextProvider = ({children})=>{
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
+  
+
+  const [filter, setFilter] = useState('showAll')
+
+  const [priceFilter, setPriceFilter] = useState('')
+
 
   
-    return(
+  return(
+    <FilterContext.Provider value={[filter, setFilter, priceFilter, setPriceFilter] } >
       <Context.Provider value={[cart, setCart]}>
+
 
         {children}
 
+
+
       </Context.Provider>
+    </FilterContext.Provider>
     )
 
 
@@ -35,4 +46,4 @@ const CartContextProvider = ({children})=>{
   
 }
 
-export default CartContextProvider
+export default ContextProvider

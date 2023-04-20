@@ -1,15 +1,17 @@
-'use client'
 
+import React, {useState} from 'react'
 
 import Image from 'next/image'
 
+import ProductModal from './ProductModal'
+
+import '../app/globals.css'
 import AddToCartBtn from './AddToCartBtn'
 
-import ProductModal from './ProductModal'
-import { useState } from 'react'
+const Item = ({ name, description, img , price, id }) => { 
 
-
-const DessertsItem = ({ name, description, img , price, id }) => { 
+  
+  
 
   const [modalState, setModalState] = useState(false)
 
@@ -22,6 +24,23 @@ const DessertsItem = ({ name, description, img , price, id }) => {
     },100)
     
   }
+
+  const [loader, setLoader] = useState(true)
+
+
+  setTimeout(()=>{
+    setLoader(false)
+  }, 1000)
+  
+
+  if(loader){
+    return(
+      
+      <span class="loaderItems"></span>
+      
+    )
+  }
+    
   return (
     <div  className='bg-[#1F1D2B] m-1 rounded-[10px] flex flex-col w-full z-0 relative max-w-[280px] min-h-[220px]  md:max-w-[310px] lg:max-w-[350px] lg:max-h-250px justify-center items-center transition duration-300 hover:shadow-2xl'>
             
@@ -58,4 +77,4 @@ const DessertsItem = ({ name, description, img , price, id }) => {
   
 }
 
-export default DessertsItem
+export default Item

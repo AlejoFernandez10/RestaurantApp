@@ -24,9 +24,9 @@ const Filters = () => {
           <h1 className='text-2xl'>Tu Resto</h1>
           <span className='text-gray-400 text-xs ml-[2px]'>09 November 2002</span>
         </div>
-        <form className='relative flex items-center'>
-        <FiSearch  className='absolute text-[18px] left-3'/>
-        <input type="Search" placeholder='Search' className='rounded-[5px] text-sm bg-[#1F1D2B] m-auto p-[5px] pl-9 px-4 w-[90%] sm:w-[250px] sm: sm:m-0 sm:mr-5 py-[7px] text-gray-50  ' />
+        <form className='relative flex items-center w-full sm:w-auto'>
+         <FiSearch  className='absolute text-[18px] left-6 sm:left-3'/>
+         <input type="Search" placeholder='Search' className='rounded-[5px] text-sm bg-[#1F1D2B] max-w-[450px] w-full ml-3  m-auto p-[5px] pl-10 px-4  sm:max-w-[250px] sm:m-0 sm:mr-5 py-[7px] text-gray-50 md:w-[400px]  ' />
         </form>
       </div>
 
@@ -42,7 +42,7 @@ const Filters = () => {
         <h4 className='font-semibold text-base'>Choose Dishes</h4>
         <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-[#1F1D2B] px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm ring-1 ring-inset  ">
+        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-[#1F1D2B] px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm   ">
           Options
           <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-100" aria-hidden="true" />
         </Menu.Button>
@@ -64,11 +64,11 @@ const Filters = () => {
                 <a
                   href="#"
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-200' : 'text-gray-100',
+                    active ? ' bg-gray-800 text-gray-200' : 'text-gray-100',
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                  Populares
+                  Higher price
                 </a>
               )}
             </Menu.Item>
@@ -77,27 +77,15 @@ const Filters = () => {
                 <a
                   href="#"
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-200' : 'text-gray-100',
+                    active ? 'bg-gray-800  text-gray-200' : 'text-gray-100',
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                  Support
+                  Lower price
                 </a>
               )}
             </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-200' : 'text-gray-100',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  License
-                </a>
-              )}
-            </Menu.Item>
+            
             
           </div>
         </Menu.Items>

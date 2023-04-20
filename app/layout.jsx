@@ -1,6 +1,6 @@
 import Navbar from '@/components/Navbar'
 import './globals.css'
-import CartContextProvider from './context/CartContextProvider'
+import ContextProvider from './context/ContextProvider'
 import Notifications from './notifications/Notifications'
 import Loader from '@/components/Loader'
 
@@ -12,17 +12,17 @@ export const metadata = {
 
 
 export default function RootLayout({ children }) {
-
+  
   
   return (
-    <html lang="en">     
+    <html lang="es">     
       <body className='relative'>
         <Loader />
-        <CartContextProvider>
+        <ContextProvider>
           <Navbar />
           <Notifications />
           {children}        
-        </CartContextProvider>          
+        </ContextProvider>          
       </body>
     </html>
   )

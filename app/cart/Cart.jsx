@@ -12,6 +12,8 @@ import Image from 'next/image';
 import {BsTrash3} from 'react-icons/bs'
 import Link from 'next/link';
 
+
+
 const Cart = ({state}) => {
 
   const [open, setOpen] = useState(false)
@@ -40,7 +42,7 @@ const Cart = ({state}) => {
     
     const emptyCart = ()=>{
       toast.success('Carrito Vacío!', {
-        position: "bottom-center",
+        position: "top-center",
         autoClose: 1400,
         hideProgressBar: true,
         closeOnClick: true,
