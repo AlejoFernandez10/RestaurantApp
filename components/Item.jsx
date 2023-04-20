@@ -1,5 +1,5 @@
 
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 
 import Image from 'next/image'
 
@@ -8,9 +8,7 @@ import ProductModal from './ProductModal'
 import '../app/globals.css'
 import AddToCartBtn from './AddToCartBtn'
 
-const Item = ({ name, description, img , price, id }) => { 
-
-  
+const Item = ({ name, description, img , price, id }) => {  
   
 
   const [modalState, setModalState] = useState(false)
@@ -25,18 +23,17 @@ const Item = ({ name, description, img , price, id }) => {
     
   }
 
-  const [loader, setLoader] = useState(true)
-
+  const [loader, setLoader] = useState(true) 
 
   setTimeout(()=>{
     setLoader(false)
   }, 1000)
-  
+    
 
   if(loader){
     return(
       
-      <span class="loaderItems"></span>
+      <span className="loaderItems"></span>
       
     )
   }
@@ -46,7 +43,7 @@ const Item = ({ name, description, img , price, id }) => {
             
             <button onClick={()=> openModal()} className=' absolute top-[-40px]'>
 
-              <Image src={img} alt={description}  width={120} height={82.5} className='rounded-[15%] h-auto w-auto max-h-[82.5px]'  />
+              <Image src={img} alt={description}   width={120} height={82.5} className='rounded-[15%] h-auto w-auto max-h-[82.5px]'  />
             </button>
             
             <div className='mt-10 flex flex-col w-full px-5 max-w-[95%]'>

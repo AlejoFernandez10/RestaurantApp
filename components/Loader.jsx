@@ -8,6 +8,7 @@ const Loader = () => {
 
   const [loader, setLoader] = useState(true)
 
+  
 
   setTimeout(()=>{
     setLoader(false)

@@ -37,7 +37,7 @@ const Home = async () => {
 
 			<div className="w-full flex justify-center">
 
-			  <Filters />
+			  <Filters dataProducts={dataProducts} />
 
 			</div>
  

@@ -5,13 +5,14 @@ import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import FilterButtons from './FilterButtons'
 
-import {FiSearch} from 'react-icons/fi'
+
+import SearchBar from './SearchBar'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const Filters = () => {
+const Filters = ({dataProducts} ) => {
 
   
 
@@ -24,10 +25,7 @@ const Filters = () => {
           <h1 className='text-2xl'>Tu Resto</h1>
           <span className='text-gray-400 text-xs ml-[2px]'>09 November 2002</span>
         </div>
-        <form className='relative flex items-center w-full sm:w-auto'>
-         <FiSearch  className='absolute text-[18px] left-6 sm:left-3'/>
-         <input type="Search" placeholder='Search' className='rounded-[5px] text-sm bg-[#1F1D2B] max-w-[450px] w-full ml-3  m-auto p-[5px] pl-10 px-4  sm:max-w-[250px] sm:m-0 sm:mr-5 py-[7px] text-gray-50 md:w-[400px]  ' />
-        </form>
+       <SearchBar data={dataProducts} />
       </div>
 
         <div className=' max-w-[1200px] flex items-center justify-center sm:justify-start w-full pt-6 pb-5 mx-2'>

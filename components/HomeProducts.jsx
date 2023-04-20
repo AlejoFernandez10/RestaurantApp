@@ -28,7 +28,7 @@ const HomeProducts = ({products}) => {
         <div  className='grid grid-cols-1 m-auto place-items-center sm:grid-cols-2 lg:grid-cols-3 gap-x-2 w-full px-10 gap-y-20 pt-20 md:max-w-[700px] lg:max-w-[1300px]'>
           
             
-          {filter !== 'desserts' ? products[0].slice(10, pizzasDisplay).map((prod) => (
+          {filter === 'pizzas' && products[0].slice(10, pizzasDisplay).map((prod) => (            
             
             <Item 
               key={prod.name}
@@ -38,20 +38,21 @@ const HomeProducts = ({products}) => {
               description={prod.description}
               img={prod.img}
             />
-          ))
-            :
-            products[0].slice(31, 36).map((prod) => (
             
-              <Item 
-                key={prod.name}
-                id={prod.id}
-                name={prod.name}
-                price={prod.price}
-                description={prod.description}
-                img={prod.img}
-              />
-            ))
+          ))            
         }
+
+        {filter === 'desserts' && products[0].slice(31, 36).map((prod) => (
+            
+            <Item 
+              key={prod.name}
+              id={prod.id}
+              name={prod.name}
+              price={prod.price}
+              description={prod.description}
+              img={prod.img}
+            />
+          ))}
         
         {filter === 'showAll' && products[0].slice(inicialProd, prodsDisplayed).map((prod) => (
             
