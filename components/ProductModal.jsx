@@ -4,7 +4,8 @@ import { Fragment, useRef, useState, useEffect } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 
 import Image from 'next/image'
-import AddToCartBtn from './AddToCartBtn'
+
+import AddToCartVariant from './AddToCartVariant'
 
 const  ProductModal = ({name, price, description, img, state, id})=> {
 
@@ -70,7 +71,7 @@ const  ProductModal = ({name, price, description, img, state, id})=> {
                 <div className="bg-[#262737] px-4 pb-4 pt-5 sm:p-6 sm:pb-4 ">
                   <div className="sm:flex sm:items-start max-w-[500px] sm:max-w-max">
                     <div className="mx-auto flex  flex-shrink-0 rounded-[10%] items-center justify-center   sm:mx-0  mt-5 ">
-                      <Image src={img} alt={description}  width={150} height={82.5} className='rounded-[10%] h-auto w-auto '  />
+                      <Image src={img} alt={description}  width={150} height={82.5} className='rounded-[5%] h-auto w-auto '  />
                     </div>
                     <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                       <Dialog.Title as="h3" className=" font-semibold text-lg text-left pl-2 leading-6 mb-4 sm:mb-6 sm:pt-5 text-gray-50 flex justify-between">
@@ -93,7 +94,7 @@ const  ProductModal = ({name, price, description, img, state, id})=> {
                         >
                           <button
                             type="button"
-                            className="w-10 h-10 leading-10 text-gray-50 text-lg dark:bg-gray-900 transition  hover:opacity-75 "
+                            className="w-10 h-10 rounded-s leading-10 text-gray-50 text-lg dark:bg-gray-900 transition  hover:opacity-75 "
                             onClick={resQty}
                           >
                             -
@@ -105,7 +106,7 @@ const  ProductModal = ({name, price, description, img, state, id})=> {
 
                           <button
                             type="button"
-                            className="w-10 h-10 leading-10 text-gray-50 text-lg dark:bg-gray-900 transition  hover:opacity-75 "
+                            className="w-10 h-10 leading-10 rounded-e text-gray-50 text-lg dark:bg-gray-900 transition  hover:opacity-75 "
                             onClick={addQty}
                           >
                             +
@@ -116,17 +117,14 @@ const  ProductModal = ({name, price, description, img, state, id})=> {
                     </div>
                   </div>
                 </div>
-                <div className="bg-[#262737] px-4 py-3 flex flex-row-reverse sm:px-6">
+                <div className="bg-[#262737] flex flex-row-reverse sm:px-6 mb-4 gap-2">
+                  
+                  
+                    <AddToCartVariant  name={name} img={img} description={description} price={price} id={id} quantity={quantity} />
+                  
                   <button
                     type="button"
-                    className="inline-flex w-full justify-center rounded-md  px-3 py-2 text-sm font-semibold text-white shadow-sm  sm:ml-3 sm:w-auto"
-                    
-                  >
-                    <AddToCartBtn  name={name} img={img} description={description} price={price} id={id} quantity={quantity} />
-                  </button>
-                  <button
-                    type="button"
-                    className="mt-3 inline-flex w-full justify-center rounded-md py-2 pb-0 px-3 text-sm font-semibold text-gray-50 shadow-sm sm:mt-1 sm:w-auto transition duration-200 hover:bg-slate-50 hover:text-gray-900"
+                    className="mt-3 inline-flex w-full justify-center rounded-md py-[10px]  px-3 text-sm font-semibold text-red-50 shadow-sm sm:mt-1 sm:w-auto transition duration-200 hover:bg-slate-50 hover:text-gray-900"
                     onClick={() => setOpen(false)}
                     ref={cancelButtonRef}
                   >
