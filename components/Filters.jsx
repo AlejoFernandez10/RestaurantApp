@@ -22,7 +22,7 @@ const Filters = ({dataProducts} ) => {
       <div className=' max-w-[1220px] flex flex-col items-start justify-between  w-full pt-10 sm:flex-row  sm:items-center'>
 
         <div className='p-2 mx-4'>
-          <h1 className='text-2xl'>Tu Resto</h1>
+          <h1 className='text-2xl'>YourResto</h1>
           <span className='text-gray-400 text-xs ml-[2px]'>09 November 2002</span>
         </div>
        <SearchBar data={dataProducts} />

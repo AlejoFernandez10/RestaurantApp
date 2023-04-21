@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer aria-label="Site Footer" className="bg-white pt-10 dark:bg-[#262737]">
+    <footer aria-label="Site Footer" className="bg-white pt-10 dark:bg-[#262737] relative">
   <div
     className="max-w-screen-xl px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8"
   >
@@ -342,6 +342,7 @@ const Footer = () => {
       &copy; 2022. Company Name. All rights reserved.
     </p>
   </div>
+  <span className='absolute bg-black text-white w-full text-center font-semibold'>Developed by  <a name='linkedInProfile' target='_blank' className='underline' href='https://www.linkedin.com/in/alejo-fernandez-23821b243/'>Alejo Fernandez</a>  </span>
   </footer>
 
   )
