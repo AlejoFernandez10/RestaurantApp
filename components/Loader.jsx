@@ -1,6 +1,6 @@
 'use client'
 
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import '../app/globals.css'
 
 
@@ -8,11 +8,13 @@ const Loader = () => {
 
   const [loader, setLoader] = useState(true)
 
-  
+  useEffect(()=>{
+    
+    setTimeout(()=>{
+      setLoader(false)
+    }, 2000)
+  })
 
-  setTimeout(()=>{
-    setLoader(false)
-  }, 2000)
 
     if(loader){
     

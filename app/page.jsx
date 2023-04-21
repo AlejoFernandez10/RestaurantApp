@@ -15,12 +15,12 @@ const Home = async () => {
 	const dataProducts= [];
 	const desserts = []
 
-	const dataFetch = await fetch('https://pizza-and-desserts.p.rapidapi.com/pizzas', options)
+	 await fetch('https://pizza-and-desserts.p.rapidapi.com/pizzas', options)
 	.then(response => response.json())															
 	.then(response => dataProducts.push(response))	
 	.catch(err => console.error(err));
 
-	const dataDesserts = await fetch('https://pizza-and-desserts.p.rapidapi.com/desserts', options)
+		await fetch('https://pizza-and-desserts.p.rapidapi.com/desserts', options)
 	.then(response => response.json())
 	.then(response => desserts.push(response))
 	.catch(err =>  console.log(err))

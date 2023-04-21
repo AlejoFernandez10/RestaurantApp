@@ -1,11 +1,11 @@
 'use client'
 
-import { Fragment, useState, useEffect, useContext } from 'react'
+import { Fragment, useState, useEffect} from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
 
-
+import {AiOutlineClose} from 'react-icons/ai'
 import Welcome from './Welcome'
 import { IoMdNotificationsOutline } from 'react-icons/io'
 
@@ -14,7 +14,13 @@ const NotificationsContainer = ({state}) => {
 
   const [open, setOpen] = useState(false)
 
-  const NotisContainer = []
+  const NotisContainer = [
+    {
+      id:"123123",
+      title:"Welcome!",
+      description:"This is an example of a Notification"
+    }
+  ]
 
   useEffect(()=>{
     const checkState = ()=>{
@@ -82,18 +88,19 @@ const NotificationsContainer = ({state}) => {
 
                               {NotisContainer.length === 0 ? <p className='text-center pt-10 text-xl'>No notifications yet ...</p> : 
                                     
-                              NotisContainer.map((notis) => (
-                                <li key={notis.id} className=" py-6 min-h-[150px]  bg-[#262737] rounded">
+                              NotisContainer.map((noti) => (
+                                <li key={noti.id} className=" py-3 min-h-[80px]  bg-[#262737] rounded-md">
                                   <div className="flex pl-3 w-[95%] overflow-hidden rounded-md ">
                                     
                                   
-                                  <div className="ml-3 flex w-full  flex-col">
+                                  <div className="ml-3 flex w-full  flex-col relative">
+                                    <AiOutlineClose className='absolute right-0 cursor-pointer' />
                                     <div className='w-full'>
-                                      <div className="flex justify-between w-full text-base font-medium text-gray-200">
-                                        <h3 className='flex flex-col sm:flex-row justify-between w-[90%] sm:w-[70%]'>
-                                          
+                                      <div className="flex flex-col justify-start items-start w-full text-base font-medium text-gray-200">
+                                        <h3 className=' ml-2 text-lg font-semibold'>
+                                           {noti.title} 
                                         </h3>
-                                        <p className="ml-4 text-xs sm:text-sm ">Notis description </p>
+                                        <p className=" ml-2 mt-1 text-xs text-gray-400 "> {noti.description.slice(0,40)}... </p>
                                       </div>
                                       
                                     </div>

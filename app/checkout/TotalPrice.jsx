@@ -16,9 +16,9 @@ const TotalPrice = () => {
       });
   
     return (
-      <p>
+      <span>
         $ {total}.00
-      </p>
+      </span>
     )
   }
 

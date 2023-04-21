@@ -14,7 +14,7 @@ const Delivery = () => {
     
     <ul className='mt-10 w-full  flex flex-col justify-center '>
 
-      <li className={`${deli ? 'hidden' : 'inline'} text-center text-lg mt-[85px] sm:text-xl`}> Nothing to deliver yet ... </li>
+      <li className={`${localStorage.getItem('forDeli') ? 'hidden' : 'inline'} text-center text-lg mt-[85px] sm:text-xl`}> Nothing to deliver yet ... </li>
 
       {deli.map(item =>(
         

@@ -33,7 +33,7 @@ const Navbar = () => {
 
         <ul className='hidden  max-h-[800px] md:flex flex-col gap-10 items-center md:pt-20 '> 
 
-          <h2 className='font-semibold text-xl'> <Link href={'/'}> LOGO </Link>  </h2>
+          <h2 className='font-semibold text-lg'> <Link href={'/'}> LOGO </Link>  </h2>
           
           <li >
 

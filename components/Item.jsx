@@ -43,7 +43,7 @@ const Item = ({ name, description, img , price, id }) => {
             
             <button onClick={()=> openModal()} className=' absolute top-[-40px]'>
 
-              <Image src={img} alt={description}   width={120} height={82.5} className='rounded-[15%] h-auto w-auto max-h-[82.5px]'  />
+              <Image src={img} alt={description}   width={120} height={82.5}  className='rounded-[15%] h-auto w-auto'  />
             </button>
             
             <div className='mt-10 flex flex-col w-[95%] px-5 '>
@@ -53,7 +53,7 @@ const Item = ({ name, description, img , price, id }) => {
                     <div className='flex flex-col mt-1 w-full  '>
                       <h3 className='font-semibold text-base  text-left  md:pl-6'>{name} </h3>
 
-                      {/* ---- STARS SVG */}
+                      {/* ---- STARS SVG  ---------*/}
                       <div className="-ml-0.5 flex  md:pl-6">
                              <svg
                                className="h-3 w-3 text-yellow-400"

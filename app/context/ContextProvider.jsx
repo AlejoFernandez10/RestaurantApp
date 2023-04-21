@@ -16,9 +16,17 @@ const ContextProvider = ({children})=>{
     return localCart ? JSON.parse(localCart) : [];
   });
   
+
+  const [Nts, setNts] = useState([
+    
+  ])
+  
   useEffect(() => {
+
     localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
+    localStorage.setItem('Nts', JSON.stringify(Nts))
+
+  }, [cart, Nts]);
 
   
 
@@ -31,12 +39,13 @@ const ContextProvider = ({children})=>{
   return(
     <FilterContext.Provider value={[filter, setFilter, priceFilter, setPriceFilter] } >
       <Context.Provider value={[cart, setCart]}>
+        <NotisContext.Provider value={[Nts, setNts]}>
 
-
-        {children}
-
-
-
+        {children} 
+        
+        
+        
+        </NotisContext.Provider>
       </Context.Provider>
     </FilterContext.Provider>
     )
