@@ -5,11 +5,13 @@ import React, {useContext} from 'react'
 import CartContext from '../context/Context'
 
 const PayNowBtn = () => {
-  const itemsPayed = JSON.parse(localStorage.getItem('cart') || '[]')
-
+  
   const [cart, setCart] = useContext(CartContext)
+  
+  const itemsPayed = typeof localStorage !== 'undefined' ? JSON.parse(localStorage.getItem('cart') || '[]') : [];
 
-  const forDeli = JSON.parse(localStorage.getItem('forDeli')) || []
+  const forDeli = typeof localStorage !== 'undefined' ? JSON.parse(localStorage.getItem('forDeli')) || [] : [];
+
 
   const onClickHandler = () => {
 
