@@ -55,7 +55,7 @@ const Checkout = () => {
                       <input
                         type="text"
                         id="FirstName"
-                        className="mt-1 w-full rounded-sm p-[5px] border-gray-900 bg-[#262737] shadow-2xl sm:text-base"
+                        className="mt-1 w-full rounded-sm p-[5px] py-[6px] border-gray-900 bg-[#262737] shadow-2xl sm:text-base"
                       />
                     </div>
 
@@ -70,7 +70,7 @@ const Checkout = () => {
                       <input
                         type="text"
                         id="LastName"
-                        className="mt-1 w-full rounded-sm p-[5px] border-gray-900 bg-[#262737] shadow-2xl sm:text-base"
+                        className="mt-1 w-full rounded-sm p-[5px] py-[6px] border-gray-900 bg-[#262737] shadow-2xl sm:text-base"
                       />
                     </div>
 
@@ -82,7 +82,7 @@ const Checkout = () => {
                       <input
                         type="text"
                         id="Email"
-                        className="mt-1 w-full rounded-sm p-[5px] border-gray-900 bg-[#262737] shadow-2xl sm:text-base"
+                        className="mt-1 w-full rounded-sm p-[5px] py-[6px] border-gray-900 bg-[#262737] shadow-2xl sm:text-base"
                       />
                     </div>
 
@@ -94,7 +94,7 @@ const Checkout = () => {
                       <input
                         type="tel"
                         id="Phone"
-                        className="mt-1 w-full rounded-sm p-[5px] border-gray-900 bg-[#262737] shadow-2zl sm:text-base"
+                        className="mt-1 w-full rounded-sm p-[5px] py-[6px] border-gray-900 bg-[#262737] shadow-2zl sm:text-base"
                       />
                     </div>
 
@@ -111,7 +111,7 @@ const Checkout = () => {
                             type="text"
                             id="CardNumber"
                             placeholder="Card Number"
-                            className="relative mt-1 w-full rounded-t-sm bg-[#262737] p-[6px] mb-2 border-gray-200 focus:z-10 sm:text-sm"
+                            className="relative mt-1 w-full rounded bg-[#262737] p-[6px] py-[7px] mb-2 border-gray-200 focus:z-10 sm:text-sm"
                           />
 
                         </div>
@@ -124,7 +124,7 @@ const Checkout = () => {
                               type="text"
                               id="CardExpiry"
                               placeholder="Expiry Date"
-                              className="relative w-full rounded-t-sm bg-[#262737] p-[6px]  focus:z-10 sm:text-sm"
+                              className="relative w-full rounded bg-[#262737] p-[6px] py-[7px]  focus:z-10 sm:text-sm"
                             />
                           </div>
 
@@ -135,7 +135,7 @@ const Checkout = () => {
                               type="text"
                               id="CardCVC"
                               placeholder="CVC"
-                              className="relative w-full rounded-t-sm bg-[#262737] p-[6px]  focus:z-10 sm:text-sm"
+                              className="relative w-full rounded bg-[#262737] p-[6px] py-[7px] focus:z-10 sm:text-sm"
                             />
                           </div>
                         </div>
@@ -153,7 +153,7 @@ const Checkout = () => {
 
                           <select
                             id="Country"
-                            className="relative w-full rounded-sm p-[5px] px-[6px] border-gray-900 bg-[#262737] shadow-2xl  sm:text-sm"
+                            className="relative w-full rounded p-[5px] px-[6px] border-gray-900 bg-[#262737] shadow-2xl  sm:text-sm"
                           >
                             <option>Argentina</option>
                             <option>Brazil</option>

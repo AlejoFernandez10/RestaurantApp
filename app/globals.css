@@ -24,11 +24,11 @@ body {
 }
 
 
-.nav-link p{
+.nav-link span{
   display: none;
 }
 
-.nav-link:hover > p{
+.nav-link:hover > span{
   display: inline;
 }
 

@@ -9,6 +9,7 @@ import {AiOutlineHome} from 'react-icons/ai'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {BsQuestionCircle} from 'react-icons/bs'
 import {MdPeopleOutline} from 'react-icons/md'
+import {FiMapPin} from 'react-icons/fi'
 
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
@@ -54,7 +55,7 @@ const Navbar = () => {
             <Link href={'/'} className='relative nav-link  ' >
               <MdPeopleOutline className='text-[#EC7C6A] text-[22px] md:text-[40px] md:p-2 rounded hover:bg-gray-700 hover:bg-opacity-40' />              
 
-               <p className='absolute  top-10  right-[-50px]   shadow-2xl text-sm font-semibold transition-all duration-200 '>About us</p>
+               <span className='absolute  top-10  right-[-50px]   shadow-2xl text-sm font-semibold transition-all duration-200 '>About us</span>
               
             </Link>
           </li>
@@ -62,7 +63,14 @@ const Navbar = () => {
           <li>
             <Link href={'/'} className='relative nav-link'>
               <BsQuestionCircle className='text-[#EC7C6A] text-[22px] md:text-[40px] md:p-2 rounded hover:bg-gray-700 hover:bg-opacity-40' />
-              <p className='absolute  top-10  right-[-30px]   shadow-2xl text-sm font-semibold transition-all duration-200 '>FAQs</p>
+              <span className='absolute  top-10  right-[-30px]   shadow-2xl text-sm font-semibold transition-all duration-200 '>FAQs</span>
+            </Link>
+          </li>
+
+          <li>
+            <Link href={'/'} className='relative nav-link'>
+              <FiMapPin className='text-[#EC7C6A] text-[22px] md:text-[40px] md:p-2 rounded hover:bg-gray-700 hover:bg-opacity-40' />
+              <span className='absolute  top-10  right-[-30px]   shadow-2xl text-sm font-semibold transition-all duration-200 '>Find us</span>
             </Link>
           </li>
 

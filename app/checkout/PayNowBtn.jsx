@@ -1,8 +1,16 @@
 'use client'
 
-import Link from 'next/link'
-import React, {useContext} from 'react'
+
+import React, {useContext, useState} from 'react'
 import CartContext from '../context/Context'
+
+
+
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import Link from 'next/link'
+
+const MySwal = withReactContent(Swal);
 
 const PayNowBtn = () => {
   
@@ -24,17 +32,35 @@ const PayNowBtn = () => {
     setCart([]);
   }
 
+  const fireNoti =() => {
+
+    MySwal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Purchase completed!',
+      text:'You will receive a notification when your meal is on its way',
+      showConfirmButton: false,
+      background:"#000" ,
+      color:"#fff",
+      
+    })
+  }
   
+  /* const [navigation, setNavigation] = useState(false) */
+
+  
+
  
 
   return (
-    <Link href={'/'}>
-    <button onClick={()=> onClickHandler() }
-      className="block w-full rounded-md bg-black p-2.5 text-sm text-white transition hover:shadow-lg">
-      
-      Pay Now
-    </button>
-    </Link>
+     <Link href={`${navigation &&  '/'} `}>
+        <button onClick={(e)=> e.preventDefault() &  onClickHandler() & fireNoti()}
+          className="block w-full rounded-md bg-black p-2.5 text-sm text-white transition hover:shadow-lg">
+          
+          Pay Now
+        </button>
+     </Link> 
+    
   )
 }
 

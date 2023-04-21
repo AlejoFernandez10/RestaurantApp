@@ -40,7 +40,7 @@ const Cart = ({state}) => {
       precioTotal += (element.price * element.cantidad)
     });
     
-    
+    /* Empy cart notification */
     const emptyCart = ()=>{
       toast.success('Carrito Vacío!', {
         position: "top-center",
@@ -60,6 +60,18 @@ const Cart = ({state}) => {
 
     const [showCart, setShowCart] = useState(true)
 
+    const [btn1Active, setBtn1Active] = useState(true)
+    const [btn2Active, setBtn2Active] = useState(false)
+
+
+    const deli = typeof localStorage !== 'undefined' ? JSON.parse(localStorage.getItem('forDeli')) || [] : [];
+
+    
+
+      const totalQty = deli.reduce((acc, curr)=>{
+        return acc + curr.cantidad
+      }, 0)
+    
   
   
   if(cart.length === 0 ){
@@ -111,8 +123,13 @@ const Cart = ({state}) => {
                         </div>
 
                         <div className='mt-5 flex gap-2 '>
-                            <button className='border-[1px] px-4 rounded' onClick={(()=> setShowCart(true))}>Cart </button>
-                            <button className='border-[1px] px-2 rounded' onClick={(()=> setShowCart(false))}>Delivery</button>
+
+                            <button className={`border-[1px] py-1  px-5 rounded-lg border-gray-600 text-[#EC7C6A] ${btn1Active ? 'bg-[#EC7C6A] text-white' : ''} `} onClick={(()=> setShowCart(true) & setBtn1Active(true) & setBtn2Active(false) ) }>Cart </button>
+                            
+                            <button className={`border-[1px] py-1 px-2  rounded-lg border-gray-600 text-[#EC7C6A] relative ${btn2Active ? 'bg-[#EC7C6A] text-white' : ''} `} onClick={(()=> setShowCart(false) & setBtn1Active(false) & setBtn2Active(true) ) }>Delivery
+                              <span className={`absolute top-[-10px] right-[-10px] border-[1px]  border-gray-300 text-white rounded-full px-[6px] text-[13px]  shadow-2xl ${btn2Active ? 'bg-[#262737] ' : 'bg-[#EC7C6A]'}`}> {totalQty} </span>
+                            </button>
+                        
                         </div>
 
                         {showCart ?
@@ -121,7 +138,7 @@ const Cart = ({state}) => {
                           <div className="flow-root">
                             <ul role="list" className="flex flex-col gap-y-5">
 
-                              {cart.length === 0 ? <p className='text-center absolute left-[35%] top-[30%] text-2xl'>Cart empty...</p> : 
+                              {cart.length === 0 ? <p className='text-center mt-[85px] text-xl'>Cart empty...</p> : 
                                     
                               cart.map((product) => (
                                 <li key={product.id} className=" py-6 min-h-[150px]  bg-[#262737] rounded">

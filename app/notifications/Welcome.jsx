@@ -22,9 +22,7 @@ const Welcome = () => {
     })
   }
 
-  return(
-    <button onClick={()=> fireNoti()}>noti</button>
-  )
+  
   
 }
 

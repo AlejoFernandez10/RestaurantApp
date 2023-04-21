@@ -4,15 +4,17 @@ import Image from 'next/image'
 
 const Delivery = () => {
 
-  const deli = JSON.parse(localStorage.getItem('forDeli') || '[]')
+  const deli = typeof localStorage !== 'undefined' ? JSON.parse(localStorage.getItem('forDeli')) || [] : [];
 
   
   
 
-if(deli){
+
   return (
     
-    <ul className='mt-10'>
+    <ul className='mt-10 w-full  flex flex-col justify-center '>
+
+      <li className={`${deli ? 'hidden' : 'inline'} text-center text-lg mt-[85px] sm:text-xl`}> Nothing to deliver yet ... </li>
 
       {deli.map(item =>(
         
@@ -40,27 +42,25 @@ if(deli){
                                 </div>
                                 <div>
                                   <dt className="inline">Status:</dt>
-                                  <dd className="inline text-green-500"> On its way </dd>
+                                  <dd className="inline text-green-500"> On preparation </dd>
                                 </div>
                               </dl>
                             </div>
                           </li>
       
-      ))}
+      ))
+        
+    }
 
     </ul>
   )
   
-}else{
-  return(
-    <div className='h-[80%] w-full flex items-center justify-center'>
 
-      <h3 className='text-gray-300 text-lg'> No items being delivered... </h3>
-
-    </div>
-  )
   
-}
+    
+  
+  
+
   
 }
 
