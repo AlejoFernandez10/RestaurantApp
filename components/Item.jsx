@@ -41,7 +41,7 @@ const Item = ({ name, description, img , price, id }) => {
   return (
     <div  className='bg-[#1F1D2B] m-1 rounded-[10px] flex flex-col w-full z-0 relative max-w-[280px] min-h-[220px]  md:max-w-[310px] lg:max-w-[350px] lg:max-h-250px justify-center items-center transition duration-300 hover:shadow-2xl'>
             
-            <button onClick={()=> openModal()} className=' absolute top-[-40px]'>
+            <button name='open modal' onClick={()=> openModal()} className=' absolute top-[-40px]'>
 
               <Image src={img} alt={description}   width={120} height={82.5}  className='rounded-[15%] h-auto w-auto'  />
             </button>

@@ -37,7 +37,7 @@ const Navbar = () => {
           
           <li >
 
-            <Link href={'/'}> <AiOutlineHome  className='text-[#EC7C6A] text-[25px] md:text-[40px] md:p-2 rounded hover:bg-gray-700 hover:bg-opacity-40'/> </Link>
+            <Link href={'/'} name="home" > <AiOutlineHome  className='text-[#EC7C6A] text-[25px] md:text-[40px] md:p-2 rounded hover:bg-gray-700 hover:bg-opacity-40'/> </Link>
 
           </li>
 
@@ -52,7 +52,7 @@ const Navbar = () => {
           <OpenCartButton />
           
           <li className=''>
-            <Link href={'/'} className='relative nav-link  ' >
+            <Link href={'/'} name="About us" className='relative nav-link  ' >
               <MdPeopleOutline className='text-[#EC7C6A] text-[22px] md:text-[40px] md:p-2 rounded hover:bg-gray-700 hover:bg-opacity-40' />              
 
                <span className='absolute  top-10  right-[-50px]   shadow-2xl text-sm font-semibold transition-all duration-200 '>About us</span>
@@ -61,14 +61,14 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Link href={'/'} className='relative nav-link'>
+            <Link href={'/'} name="FAQs" className='relative nav-link'>
               <BsQuestionCircle className='text-[#EC7C6A] text-[22px] md:text-[40px] md:p-2 rounded hover:bg-gray-700 hover:bg-opacity-40' />
               <span className='absolute  top-10  right-[-30px]   shadow-2xl text-sm font-semibold transition-all duration-200 '>FAQs</span>
             </Link>
           </li>
 
           <li>
-            <Link href={'/'} className='relative nav-link'>
+            <Link href={'/'} name="Find us" className='relative nav-link'>
               <FiMapPin className='text-[#EC7C6A] text-[22px] md:text-[40px] md:p-2 rounded hover:bg-gray-700 hover:bg-opacity-40' />
               <span className='absolute  top-10  right-[-30px]   shadow-2xl text-sm font-semibold transition-all duration-200 '>Find us</span>
             </Link>
@@ -124,13 +124,13 @@ const Navbar = () => {
                         </div>
                       <ul className='pt-5 flex flex-col gap-4'>
                         <li>
-                          <Link href={'/'} className='text-sm'>Sobre Nosotros </Link>
+                          <Link href={'/'} name="About us" className='text-sm'>About us </Link>
                         </li>
                         <li>
-                          <Link href={'/'} className='text-sm'>Donde Encontranos </Link>
+                          <Link href={'/'} name="Find us" className='text-sm'>Find us </Link>
                         </li>
                         <li>
-                          <Link href={'/'} className='text-sm'>FAQs </Link>
+                          <Link href={'/'} name="FAQs" className='text-sm'>FAQs </Link>
                         </li>
                       </ul>
                        
@@ -151,7 +151,7 @@ const Navbar = () => {
             
             <li >
 
-            <Link href={'/'}> <AiOutlineHome  className='text-[#EC7C6A] text-[25px] '/> </Link>
+            <Link href={'/'} name="home"> <AiOutlineHome  className='text-[#EC7C6A] text-[25px] '/> </Link>
 
             </li>
 
@@ -168,7 +168,7 @@ const Navbar = () => {
 
           <li >
 
-            <Link href={'/'} onClick={()=> openMenuonClick()}><GiHamburgerMenu  className='text-[#EC7C6A]  text-[25px]'/> </Link>
+            <Link href={'/'} name="open menu" onClick={()=> openMenuonClick()}><GiHamburgerMenu  className='text-[#EC7C6A]  text-[25px]'/> </Link>
 
             </li>
         </ul>

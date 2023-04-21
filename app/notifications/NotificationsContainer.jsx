@@ -69,6 +69,7 @@ const NotificationsContainer = ({state}) => {
                           <div className="ml-3 flex h-7 items-center">
                             <button
                               type="button"
+                              name='close notifications'
                               className="-m-2 p-2 text-gray-100 hover:text-gray-500"
                               onClick={() => setOpen(false)}
                             >

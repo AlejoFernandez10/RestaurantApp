@@ -60,7 +60,7 @@ const AddToCartVariant = ({name, price , img , description, id, quantity }) => {
     <>
     
 
-      <button onClick={()=> addToCart() & toast() } className='inline-flex w-full justify-center rounded-md py-[10px] m-2 mr-5  px-4 text-sm font-semibold sm:px-6  bg-[#EC7C6A] text-gray-50 shadow-sm sm:mt-1 sm:w-auto transition duration-200 hover:opacity-80' >Add </button>
+      <button name='AddToCart' onClick={()=> addToCart() & toast() } className='inline-flex w-full justify-center rounded-md py-[10px] m-2 mr-5  px-4 text-sm font-semibold sm:px-6  bg-[#EC7C6A] text-gray-50 shadow-sm sm:mt-1 sm:w-auto transition duration-200 hover:opacity-80' >Add </button>
 
     
       

@@ -37,7 +37,7 @@ const Filters = ({dataProducts} ) => {
       
 
       <div className='w-full max-w-[1200px] flex justify-between items-center px-2 pt-4'>
-        <h4 className='font-semibold text-base'>Choose Dishes</h4>
+        <h2 className='font-semibold text-base'>Choose Dishes</h2>
         <Menu as="div" className="relative inline-block text-left">
       <div>
         <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-[#1F1D2B] px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm   ">

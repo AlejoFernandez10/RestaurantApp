@@ -112,7 +112,7 @@ const Cart = ({state}) => {
 
                           <div className="ml-3 flex h-7 items-center">
                             <button
-                              type="button"
+                              type="button" name='close panel'
                               className="-m-2 p-2 text-gray-100 hover:text-gray-500"
                               onClick={() => setOpen(false)}
                             >
@@ -124,9 +124,9 @@ const Cart = ({state}) => {
 
                         <div className='mt-5 flex gap-2 '>
 
-                            <button className={`border-[1px] py-1  px-5 rounded-lg border-gray-600 text-[#EC7C6A] ${btn1Active ? 'bg-[#EC7C6A] text-white' : ''} `} onClick={(()=> setShowCart(true) & setBtn1Active(true) & setBtn2Active(false) ) }>Cart </button>
+                            <button name='show cart items' className={`border-[1px] py-1  px-5 rounded-lg border-gray-600 text-[#EC7C6A] ${btn1Active ? 'bg-[#EC7C6A] text-white' : ''} `} onClick={(()=> setShowCart(true) & setBtn1Active(true) & setBtn2Active(false) ) }>Cart </button>
                             
-                            <button className={`border-[1px] py-1 px-2  rounded-lg border-gray-600 text-[#EC7C6A] relative ${btn2Active ? 'bg-[#EC7C6A] text-white' : ''} `} onClick={(()=> setShowCart(false) & setBtn1Active(false) & setBtn2Active(true) ) }>Delivery
+                            <button name='show delivey items' className={`border-[1px] py-1 px-2  rounded-lg border-gray-600 text-[#EC7C6A] relative ${btn2Active ? 'bg-[#EC7C6A] text-white' : ''} `} onClick={(()=> setShowCart(false) & setBtn1Active(false) & setBtn2Active(true) ) }>Delivery
                               <span className={`absolute top-[-10px] right-[-10px] border-[1px]  border-gray-300 text-white rounded-full px-[6px] text-[13px]  shadow-2xl ${btn2Active ? 'bg-[#262737] ' : 'bg-[#EC7C6A]'}`}> {totalQty} </span>
                             </button>
                         
@@ -171,6 +171,7 @@ const Cart = ({state}) => {
                                       <div className="flex">
                                         <button
                                           type="button"
+                                          name='clear cart'
                                           className="font-medium text-[#EC7C6A]"
                                           onClick={()=>  emptyCart() & localStorage.clear()}
                                         >

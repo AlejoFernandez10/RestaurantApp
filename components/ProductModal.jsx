@@ -159,6 +159,7 @@ const  ProductModal = ({name, price, description, img, state, id})=> {
                         >
                           <button
                             type="button"
+                            name='rest quantity'
                             className="w-10 h-10 rounded-s leading-10 text-gray-50 text-lg dark:bg-gray-900 transition  hover:opacity-75 "
                             onClick={resQty}
                           >
@@ -171,6 +172,7 @@ const  ProductModal = ({name, price, description, img, state, id})=> {
 
                           <button
                             type="button"
+                            name="add quantity"
                             className="w-10 h-10 leading-10 rounded-e text-gray-50 text-lg dark:bg-gray-900 transition  hover:opacity-75 "
                             onClick={addQty}
                           >
@@ -189,6 +191,7 @@ const  ProductModal = ({name, price, description, img, state, id})=> {
                   
                   <button
                     type="button"
+                    name='close modal'
                     className="inline-flex w-full justify-center rounded-md py-[10px] m-2 ml-5  px-4 text-sm font-semibold   text-gray-50 shadow-sm sm:mt-1 sm:w-auto transition duration-200 hover:bg-gray-200 hover:text-gray-900"
                     onClick={() => setOpen(false)}
                     ref={cancelButtonRef}
