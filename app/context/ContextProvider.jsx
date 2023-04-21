@@ -4,7 +4,7 @@ import React from "react"
 import { useState, useEffect } from "react"
 import Context from './Context'
 import FilterContext from "./FilterContext"
-
+import NotisContext from "./NotificationsContext"
 
 
 const ContextProvider = ({children})=>{

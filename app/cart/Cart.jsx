@@ -11,6 +11,7 @@ import { toast } from 'react-toastify';
 import Image from 'next/image';
 import {BsTrash3} from 'react-icons/bs'
 import Link from 'next/link';
+import Delivery from './Delivery';
 
 
 
@@ -52,9 +53,12 @@ const Cart = ({state}) => {
         theme: "dark",
         });
 
-      localStorage.clear()
+      
       setCart([])
     }
+
+
+    const [showCart, setShowCart] = useState(true)
 
   
   
@@ -90,9 +94,10 @@ const Cart = ({state}) => {
                 >
                   <Dialog.Panel className="pointer-events-auto w-screen max-w-sm">
                     <div className="flex h-full flex-col overflow-y-scroll bg-[#1F1D2B] shadow-xl">
-                      <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
-                        <div className="flex items-start justify-between">
-                          <Dialog.Title className="text-lg font-medium text-gray-100">Order</Dialog.Title>
+                      <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6 ">
+                        <div className="flex  items-start justify-between">
+                          <Dialog.Title className="text-lg font-medium text-gray-100">Order #39342</Dialog.Title>            
+
                           <div className="ml-3 flex h-7 items-center">
                             <button
                               type="button"
@@ -104,8 +109,15 @@ const Cart = ({state}) => {
                             </button>
                           </div>
                         </div>
-  
-                        <div className="mt-16">
+
+                        <div className='mt-5 flex gap-2 '>
+                            <button className='border-[1px] px-4 rounded' onClick={(()=> setShowCart(true))}>Cart </button>
+                            <button className='border-[1px] px-2 rounded' onClick={(()=> setShowCart(false))}>Delivery</button>
+                        </div>
+
+                        {showCart ?
+                        
+                        <div className="mt-10">
                           <div className="flow-root">
                             <ul role="list" className="flex flex-col gap-y-5">
 
@@ -143,7 +155,7 @@ const Cart = ({state}) => {
                                         <button
                                           type="button"
                                           className="font-medium text-[#EC7C6A]"
-                                          onClick={()=>  emptyCart()}
+                                          onClick={()=>  emptyCart() & localStorage.clear()}
                                         >
                                           <BsTrash3 className='text-[18px] mb-2 mr-2'/>
                                         </button>
@@ -157,7 +169,14 @@ const Cart = ({state}) => {
                             </ul>
                           </div>
                         </div>
+                        :
+                        <Delivery />
+                      }
+  
                       </div>
+
+
+
   
                       <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                         <div className="flex justify-between text-base font-medium text-gray-200">

@@ -2,11 +2,12 @@ import React from 'react'
 
 import CheckoutItems from './CheckoutItems'
 import TotalPrice from './TotalPrice'
+import PayNowBtn from './PayNowBtn'
 
 
 const Checkout = () => {
 
-  
+
   return (
     <section className=' '>
       
@@ -112,6 +113,7 @@ const Checkout = () => {
                             placeholder="Card Number"
                             className="relative mt-1 w-full rounded-t-sm bg-[#262737] p-[6px] mb-2 border-gray-200 focus:z-10 sm:text-sm"
                           />
+
                         </div>
 
                         <div className="flex gap-2">
@@ -176,11 +178,12 @@ const Checkout = () => {
                     </fieldset>
 
                     <div className="col-span-6">
-                      <button
-                        className="block w-full rounded-md bg-black p-2.5 text-sm text-white transition hover:shadow-lg"
-                      >
-                        Pay Now
-                      </button>
+
+                     
+                     <PayNowBtn />
+                      
+                     
+
                     </div>
                   </form>
                 </div>

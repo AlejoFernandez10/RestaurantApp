@@ -6,11 +6,11 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 
 
 
-import { toast } from 'react-toastify';
+import Welcome from './Welcome'
 import { IoMdNotificationsOutline } from 'react-icons/io'
 
 
-const Notifications = ({state}) => {
+const NotificationsContainer = ({state}) => {
 
   const [open, setOpen] = useState(false)
 
@@ -76,6 +76,10 @@ const Notifications = ({state}) => {
                           <div className="flow-root">
                             <ul role="list" className="flex flex-col gap-y-5">
 
+                              <li >
+                                <Welcome />
+                              </li>
+
                               {NotisContainer.length === 0 ? <p className='text-center pt-10 text-xl'>No notifications yet ...</p> : 
                                     
                               NotisContainer.map((notis) => (
@@ -87,7 +91,7 @@ const Notifications = ({state}) => {
                                     <div className='w-full'>
                                       <div className="flex justify-between w-full text-base font-medium text-gray-200">
                                         <h3 className='flex flex-col sm:flex-row justify-between w-[90%] sm:w-[70%]'>
-                                          Notis Title
+                                          
                                         </h3>
                                         <p className="ml-4 text-xs sm:text-sm ">Notis description </p>
                                       </div>
@@ -116,4 +120,4 @@ const Notifications = ({state}) => {
       </Transition.Root>
 )} 
 
-export default Notifications
+export default NotificationsContainer

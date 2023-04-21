@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar'
 import './globals.css'
 import ContextProvider from './context/ContextProvider'
-import Notifications from './notifications/Notifications'
+import NotificationsContainer from './notifications/NotificationsContainer'
 import Loader from '@/components/Loader'
 
 export const metadata = {
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <Loader />
         <ContextProvider>
           <Navbar />
-          <Notifications />
+          <NotificationsContainer />
           {children}        
         </ContextProvider>          
       </body>

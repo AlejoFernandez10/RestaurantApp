@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import Notifications from './Notifications'
+import Notifications from './NotificationsContainer'
 import { IoMdNotificationsOutline } from 'react-icons/io'
 
 const OpenNotisButton = () => {
