@@ -7,6 +7,7 @@ import PayNowBtn from './PayNowBtn'
 
 const Checkout = () => {
 
+if(typeof window != 'undefinded'){
 
   return (
     <section className=' '>
@@ -191,6 +192,7 @@ const Checkout = () => {
             </div>
           </section>
       )
+}
 }
 
 export default Checkout
