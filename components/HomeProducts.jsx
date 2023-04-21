@@ -18,7 +18,7 @@ const HomeProducts = ({products}) => {
   
 
   const [filter, setFilter] = useContext(FilterContext)
-  const [priceFilter, setPriceFilter] = useContext(FilterContext)
+  
    
   
   
@@ -64,15 +64,21 @@ const HomeProducts = ({products}) => {
               description={prod.description}
               img={prod.img}
             />
-          ))}
+          ))
+          
+          }
 
           
 
 
         </div>
 
-
+        {filter === 'showAll' &&
+        
         <button onClick={() => setProdsDisplayed(36) & setPizzasDisplayed(30) } className='m-auto font-semibold text-gray-200 bg-[#EC7C6A] px-4 py-2 rounded cursor-pointer mt-5' style={{display:`${prodsDisplayed > 28 ? "none": "inline"}` }}> Ver todos </button>
+        }
+
+
         <ToastContainer
           position="top-center"
           autoClose={1400}

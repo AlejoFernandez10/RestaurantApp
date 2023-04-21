@@ -3,6 +3,7 @@ import './globals.css'
 import ContextProvider from './context/ContextProvider'
 import NotificationsContainer from './notifications/NotificationsContainer'
 import Loader from '@/components/Loader'
+import Footer from '@/components/Footer'
 
 export const metadata = {
   title: 'TuResto',
@@ -21,7 +22,8 @@ export default function RootLayout({ children }) {
         <ContextProvider>
           <Navbar />
           <NotificationsContainer />
-          {children}        
+          {children}
+          <Footer />        
         </ContextProvider>          
       </body>
     </html>
