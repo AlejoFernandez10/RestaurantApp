@@ -53,7 +53,7 @@ const PayNowBtn = () => {
  
 
   return (
-     <Link href={`${navigation &&  '/'} `}>
+     <Link href={'/'}>
         <button onClick={(e)=> e.preventDefault() &  onClickHandler() & fireNoti()}
           className="block w-full rounded-md bg-black p-2.5 text-sm text-white transition hover:shadow-lg">
           
